@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_WarehouseARM_FILE /Users/alex/Downloads/WarehouseARM/build/Qt_6_11_1_for_macOS-Debug/WarehouseARM.app/Contents/MacOS/WarehouseARM)
+set(__QT_DEPLOY_TARGET_WarehouseARM_TYPE EXECUTABLE)

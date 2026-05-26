@@ -1,0 +1,5 @@
+C:/Users/Honor/Desktop/WarehouseARM/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/WarehouseARM.dir
+C:/Users/Honor/Desktop/WarehouseARM/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Honor/Desktop/WarehouseARM/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Honor/Desktop/WarehouseARM/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/WarehouseARM_autogen_timestamp_deps.dir
+C:/Users/Honor/Desktop/WarehouseARM/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/WarehouseARM_autogen.dir

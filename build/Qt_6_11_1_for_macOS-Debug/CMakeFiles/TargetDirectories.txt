@@ -1,0 +1,5 @@
+/Users/alex/Downloads/WarehouseARM/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles/WarehouseARM.dir
+/Users/alex/Downloads/WarehouseARM/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/alex/Downloads/WarehouseARM/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/alex/Downloads/WarehouseARM/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles/WarehouseARM_autogen_timestamp_deps.dir
+/Users/alex/Downloads/WarehouseARM/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles/WarehouseARM_autogen.dir
