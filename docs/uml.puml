@@ -1,0 +1,94 @@
+@startuml
+
+title UML-диаграмма классов проекта "АРМ специалиста склада"
+
+class Product {
+    - int m_id
+    - QString m_name
+    - QString m_category
+    - int m_quantity
+    - int m_row
+    - int m_cell
+
+    + Product()
+    + Product(id : int, name : QString, category : QString, quantity : int, row : int, cell : int)
+
+    + id() : int
+    + name() : QString
+    + category() : QString
+    + quantity() : int
+    + row() : int
+    + cell() : int
+
+    + setName(name : QString) : void
+    + setCategory(category : QString) : void
+    + setQuantity(quantity : int) : void
+    + setRow(row : int) : void
+    + setCell(cell : int) : void
+}
+
+class Warehouse {
+    - QVector<Product> m_products
+    - int m_nextId
+
+    + addProduct(name : QString, category : QString, quantity : int, row : int, cell : int) : int
+    + updateProduct(id : int, name : QString, category : QString, quantity : int, row : int, cell : int) : bool
+    + removeProduct(id : int) : bool
+    + products() : QVector<Product>
+    + setProducts(products : QVector<Product>) : void
+    + searchProducts(query : QString) : QVector<Product>
+    + findById(id : int) : Product*
+    + isCellBusy(row : int, cell : int, ignoredProductId : int) : bool
+    + clear() : void
+}
+
+class DataStorage {
+    + saveProducts(fileName : QString, products : QVector<Product>, errorText : QString) : bool
+    + loadProducts(fileName : QString, products : QVector<Product>, errorText : QString) : bool
+}
+
+class WarehouseVisualizer {
+    - QVector<Product> m_products
+    - int m_rows
+    - int m_cells
+    - int m_selectedProductId
+
+    + setProducts(products : QVector<Product>) : void
+    + setSelectedProductId(productId : int) : void
+    + productSelected(productId : int) : void
+
+    # initializeGL() : void
+    # resizeGL(width : int, height : int) : void
+    # paintGL() : void
+    # mousePressEvent(event : QMouseEvent*) : void
+}
+
+class MainWindow {
+    - Warehouse m_warehouse
+    - QTableWidget* m_table
+    - WarehouseVisualizer* m_visualizer
+    - int m_currentSelectedId
+
+    + MainWindow(parent : QWidget*)
+
+    - addProduct() : void
+    - updateProduct() : void
+    - removeProduct() : void
+    - clearForm() : void
+    - searchProducts() : void
+    - resetSearch() : void
+    - saveProducts() : void
+    - loadProducts() : void
+    - tableSelectionChanged() : void
+    - visualizerSelectionChanged(productId : int) : void
+    - updateVisualizer() : void
+}
+
+Warehouse "1" o-- "*" Product : хранит
+MainWindow "1" --> "1" Warehouse : управляет данными
+MainWindow "1" --> "1" WarehouseVisualizer : обновляет схему
+WarehouseVisualizer ..> Product : отображает
+DataStorage ..> Product : сохраняет/загружает
+MainWindow ..> DataStorage : использует
+
+@enduml
